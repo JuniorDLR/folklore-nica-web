@@ -4,3 +4,4 @@ import androidx.compose.ui.graphics.Color
 
 
 val colorMain = Color(0XFF147093)
+val colorContent = Color(0XFF559fce)

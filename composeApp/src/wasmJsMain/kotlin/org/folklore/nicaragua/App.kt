@@ -1,7 +1,6 @@
 package org.folklore.nicaragua
 
 import androidx.compose.animation.Crossfade
-import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.material.MaterialTheme
@@ -13,33 +12,33 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import org.folklore.nicaragua.ui.ChinandegaScreen
 import org.folklore.nicaragua.ui.AboutScreen
-import org.folklore.nicaragua.ui.HomeScreen
+import org.folklore.nicaragua.ui.Home.HomeScreen
 import org.folklore.nicaragua.ui.LeonScreen
 import org.folklore.nicaragua.ui.menu.NavScreen
 import org.folklore.nicaragua.ui.menu.Page
 
 @Composable
 fun App() {
-
     var navigationOption by remember { mutableStateOf(Page.HOME) }
 
-    Box(modifier = Modifier.fillMaxSize().background(color = Color.White)) {
+    Box(modifier = Modifier.fillMaxSize()) {
         Column(modifier = Modifier.fillMaxWidth()) {
+
             NavScreen(navigationOption) { newNavigation ->
                 navigationOption = newNavigation
-
             }
+
             LazyColumn(modifier = Modifier.fillMaxWidth()) {
                 item {
                     ContentOption(navigationOption)
                 }
             }
+
             FooterFolk()
         }
-
     }
-
 }
+
 
 @Composable
 fun FooterFolk() {
