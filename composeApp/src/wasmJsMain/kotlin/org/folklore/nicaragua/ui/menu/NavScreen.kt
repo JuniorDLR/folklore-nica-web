@@ -17,7 +17,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import folklore_nica_web.composeapp.generated.resources.Res
-import folklore_nica_web.composeapp.generated.resources.compose_multiplatform
+import folklore_nica_web.composeapp.generated.resources.logo
 import org.folklore.nicaragua.theme.colorMain
 import org.jetbrains.compose.resources.painterResource
 
@@ -82,9 +82,9 @@ fun AppHeader() {
         horizontalArrangement = Arrangement.spacedBy(10.dp)
     ) {
         Image(
-            painter = painterResource(Res.drawable.compose_multiplatform),
+            painter = painterResource(Res.drawable.logo),
             contentDescription = "Logo",
-            modifier = Modifier.clip(shape = CircleShape).size(35.dp)
+            modifier = Modifier.clip(shape = CircleShape).size(50.dp)
         )
         Text(text = "Nica Folk", color = colorMain, fontSize = 18.sp, fontWeight = FontWeight.SemiBold)
     }
